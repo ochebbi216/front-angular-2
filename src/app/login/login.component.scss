@@ -1,0 +1,49 @@
+.container-fluid {
+  background-color: #f8f9fa; // Set the background color for the whole page
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  height: 100vh; /* Set the height to 100vh to make the container full-screen */
+  background-image: url('/assets/img/rm222batch5-kul-06.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.min-vh-100 {
+  min-height: 100vh; // Ensure the login form takes the full viewport height
+}
+
+.login-form {
+  background-color: #fff; // Set the background color for the login form
+  border-radius: 8px; // Add some rounded corners to the form
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add a subtle shadow to the form
+  max-width: 400px; // Set the maximum width for the form
+  margin: 0 auto; // Center the form horizontally
+
+  h2 {
+      color: #343a40; // Set the color for the login form title
+  }
+
+  form {
+      padding: 16px;
+
+      .form-group {
+          margin-bottom: 16px; // Add some space between form elements
+
+          label {
+              color: #343a40; // Set the color for form labels
+          }
+      }
+
+      .btn-primary {
+          background-color: #007bff; // Set the background color for the login button
+          border-color: #007bff; // Set the border color for the login button
+      }
+  }
+}
+
+img {
+  max-height: 100vh; // Make sure the image takes the full viewport height on larger screens
+  object-fit: cover; // Ensure the image covers the whole container
+}

@@ -1,0 +1,29 @@
+<table id="basic-datatable" class="table dt-responsive nowrap w-100 table-bordered">
+    <thead class="table-info">
+      <tr class="text-center">
+        <th>EnfantId</th>
+        <th>EnfantAge</th>
+        <th>EnfantName</th>
+        <th>EnfantSexe</th>
+        <th>EnfantParentId</th>
+        <th>EnfantEthmicity</th>
+        <th>EnfantJaundice</th>
+        <th>EnfantFamelyMsd</th>
+        <th>EnfantAutiste</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of child" class="text-center">
+        <td>{{item.EnfantId}}</td>
+        <td>{{item.EnfantAge}}</td>
+        <td>{{item.EnfantName}}</td>
+        <td>{{item.EnfantSexe}}</td>
+        <td>{{item.EnfantParentId}}</td>
+        <td>{{item.EnfantEthmicity}}</td>
+        <td>{{item.EnfantJaundice}}</td>
+        <td>{{item.EnfantFamelyMsd}}</td>
+        <td>{{item.EnfantAutiste}}</td>
+    </tr>
+    </tbody>
+  </table>
+  

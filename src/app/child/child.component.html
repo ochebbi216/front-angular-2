@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header d-flex">اضافة طفل</div>
+        <div class="card-body">
+          <form [formGroup]="formGroup">
+          <div class="form-group">
+            <label for="EnfantName" class="d-flex">الأسم</label>
+            <input type="text" class="form-control" id="EnfantName" formControlName="EnfantName"  name="EnfantName" required>
+          </div>
+          <div class="form-group">
+            <label for="EnfantAge" class="d-flex">العمر (شهور)</label>
+            <input type="text" class="form-control" id="EnfantAge" formControlName="EnfantAge"  name="EnfantAge" required>
+            <!-- <div *ngIf="child.age !== null && child.age < 0" class="text-danger">العمر يجب أن يكون غير سالب.</div>
+            <div *ngIf="ageExceedsLimit()" class="text-danger">العمر يجب ألا يتجاوز 36 شهرًا.</div> -->
+          </div>
+          <div class="form-group">
+            <label for="EnfantSexe" class="d-flex">الجنس</label>
+            <select class="form-control d-flex" id="EnfantSexe" formControlName="EnfantSexe"  name="EnfantSexe" required>
+              <option value="m" class="d-flex">ذكر</option>
+              <option value="f" class="d-flex">أنثى</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="EnfantEthmicity" class="d-flex">الأصل</label>
+            <select class="form-control" id="EnfantEthmicity" formControlName="EnfantEthmicity"  name="EnfantEthmicity" required>
+              <option value="Tunisie" class="d-flex">تونس</option>
+              <option value="Tunisie" class="d-flex">دولة اخرى</option> 
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="EnfantJaundice" class="d-flex">مصاب باليرقان؟</label>
+            <select class="form-control" id="EnfantJaundice" formControlName="EnfantJaundice" name="EnfantJaundice" required>
+              <option value="Yes" class="d-flex">نعم</option>
+              <option value="No" class="d-flex">لا</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="EnfantFamelyMsd" class="d-flex">فرد من العائلة مصاب بالتوحد؟</label>
+            <select class="form-control" id="EnfantFamelyMsd" formControlName="EnfantFamelyMsd" name="EnfantFamelyMsd" required>
+              <option value="True" class="d-flex">نعم</option>
+              <option value="False" class="d-flex">لا</option>
+
+            </select>
+          </div>
+          <button class="btn btn-primary d-flex" (click)="onSubmit()" [disabled]="!formGroup.valid">حفظ الطفل</button>
+        </form>
+          <!-- <button class="btn btn-primary d-flex" (click)="saveChild()" [disabled]="!child.name || !child.age || !child.sex || !child.ethnicity || child.age < 0 || ageExceedsLimit()" routerLink="/Questionnaire">حفظ الطفل</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

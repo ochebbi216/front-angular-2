@@ -1,0 +1,336 @@
+<div  class="container my-5 ">
+<div  class="card p-3">
+  <h2 class="text-center ">إجراء الإختبار</h2>
+  
+  <!-- <div *ngFor="let question of questions; let i = index" class="question">
+    <div class="d-flex">
+      <p class="text-justify">{{ i + 1 }}. {{ question.text }}</p>
+    </div>
+    <div class="response-container">
+      <div class="response d-flex flex-column">
+        <label *ngFor="let response of question.responses">
+          <input type="radio" [name]="'question' + i" [value]="response" [(ngModel)]="question.selectedResponse"> {{ response }}
+        </label>
+      </div>
+    </div>
+  </div> -->
+  <!-- Q1 -->
+  <div>
+  <div class="question">
+    <div class="d-flex">
+      <p class="text-justify">1. هل ينظر طفلك إليك عندما تناديه باسمه؟</p>
+    </div>
+    <div class="response-container">
+      <div class="response d-flex flex-column">
+        <label>
+          <input type="radio" name="question0" value="0" >
+          دائماً
+        </label>
+        <label>
+          <input type="radio" name="question0" value="0" >
+          عادة
+        </label>
+        <label>
+          <input type="radio" name="question0" value="1" >
+          أحياناً
+        </label>
+        <label>
+          <input type="radio" name="question0" value="1" >
+          نادراً
+        </label>
+        <label>
+          <input type="radio" name="question0" value="1" >
+          أبدا
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- Q2 -->
+
+  <div class="question">
+    <div class="d-flex">
+      <p class="text-justify">2. ما مدى سهولة التواصل البصري مع طفلك؟</p>
+    </div>
+    <div class="response-container">
+      <div class="response d-flex flex-column">
+        <label>
+          <input type="radio" name="question2" value="0" >
+          سهل جداً
+        </label>
+        <label>
+          <input type="radio" name="question2" value="0" >
+          سهل نوعا ما
+        </label>
+        <label>
+          <input type="radio" name="question2" value="1" >
+          صعب بعض الشيء
+        </label>
+        <label>
+          <input type="radio" name="question2" value="1">
+          صعب جدا
+        </label>
+        <label>
+          <input type="radio" name="question2" value="1">
+          مستحيل
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="question">
+    <div class="d-flex">
+      <p class="text-justify">3. هل يشير طفلك للإشارة إلى أنه يريد شيئا ما؟ (على سبيل المثال ، لعبة  بعيد المنال)</p>
+    </div>
+    <div class="response-container">
+      <div class="response d-flex flex-column">
+        <label>
+          <input type="radio" name="question3" value="0">
+          عدة مرات في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question3" value="0">
+          بضع مرّاتٍ في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question3" value="1">
+          بضع مرات في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question3" value="1">
+          أقل من مرة في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question3" value="1">
+          أبدا
+        </label>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="question">
+    <div class="d-flex">
+      <p class="text-justify">4. هل يشير طفلك إلى مشاركة الاهتمام معك؟ (على سبيل المثال ، الإشارة إلى مشهد مثير للاهتمام)</p>
+    </div>
+    <div class="response-container">
+      <div class="response d-flex flex-column">
+        <label>
+          <input type="radio" name="question4" value="0">
+          عدة مرات في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question4" value="0">
+          بضع مرّاتٍ في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question4" value="1">
+          بضع مرات في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question4" value="1">
+          أقل من مرة في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question4" value="1">
+          أبدا
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="question">
+    <div class="d-flex">
+      <p class="text-justify">5. هل يقوم طفلك باللعب بالتظاهر؟ (على سبيل المثال، يعتني بالدمى ويتحدث عبر هاتف لعبة)</p>
+    </div>
+    <div class="response-container">
+      <div class="response d-flex flex-column">
+        <label>
+          <input type="radio" name="question5" value="0">
+          عدة مرات في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question5" value="0">
+          بضع مرّاتٍ في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question5" value="1">
+          بضع مرات في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question5" value="1">
+          أقل من مرة في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question5" value="1">
+          أبدا
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="question">
+    <div class="d-flex">
+      <p class="text-justify">6. هل يتبع طفلك المكان الذي تنظر إليه؟</p>
+    </div>
+    <div class="response-container">
+      <div class="response d-flex flex-column">
+        <label>
+          <input type="radio" name="question6" value="0">
+          عدة مرات في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question6" value="0">
+          بضع مرّاتٍ في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question6" value="1">
+          بضع مرات في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question6" value="1">
+          أقل من مرة في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question6" value="1">
+          أبدا
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="question">
+    <div class="d-flex">
+      <p class="text-justify">7. هل يبدو طفلك ميالًا إلى تقديم الدعم والمواساة لك أو لأحد أفراد العائلة إذا كانوا يعانون من اضطرابات واضحة؟ (على سبيل المثال، يقوم بتمشيط شعرهم أو يعانقهم)</p>
+    </div>
+    <div class="response-container">
+      <div class="response d-flex flex-column">
+        <label>
+          <input type="radio" name="question7" value="0" >
+          دائماً
+        </label>
+        <label>
+          <input type="radio" name="question7" value="0" >
+          عادة
+        </label>
+        <label>
+          <input type="radio" name="question7" value="1" >
+          أحياناً
+        </label>
+        <label>
+          <input type="radio" name="question7" value="1" >
+          نادراً
+        </label>
+        <label>
+          <input type="radio" name="question7" value="1" >
+          أبدا
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="question">
+    <div class="d-flex">
+      <p class="text-justify">8. كيف تصف كلمات طفلك الأولى</p>
+    </div>
+    <div class="response-container">
+      <div class="response d-flex flex-column">
+        <label>
+          <input type="radio" name="question8" value="0" >
+          شائع جدا
+        </label>
+        <label>
+          <input type="radio" name="question8" value="0" >
+          شائع بعض الشيء
+        </label>
+        <label>
+          <input type="radio" name="question8" value="1" >
+          أحياناً
+        </label>
+        <label>
+          <input type="radio" name="question8" value="1" >
+          غير اعتيادي
+        </label>
+        <label>
+          <input type="radio" name="question8" value="1" >
+          طفلي لا يتكلم
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="question">
+    <div class="d-flex">
+      <p class="text-justify">9. هل يقوم طفلك بالتعبير عن نفسه باستخدام إيماءات بسيطة؟ (مثل إشارة الوداع)</p>
+    </div>
+    <div class="response-container">
+      <div class="response d-flex flex-column">
+        <label>
+          <input type="radio" name="question9" value="0">
+          عدة مرات في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question9" value="0">
+          بضع مرّاتٍ في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question9" value="1">
+          بضع مرات في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question9" value="1">
+          أقل من مرة في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question9" value="1">
+          أبدا
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="question">
+    <div class="d-flex">
+      <p class="text-justify">10. هل يحدق طفلك في أي شيء بدون غرض واضح؟</p>
+    </div>
+    <div class="response-container">
+      <div class="response d-flex flex-column">
+        <label>
+          <input type="radio" name="question10" value="1">
+          عدة مرات في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question10" value="1">
+          بضع مرّاتٍ في اليوم
+        </label>
+        <label>
+          <input type="radio" name="question10" value="1">
+          بضع مرات في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question10" value="0">
+          أقل من مرة في الأسبوع
+        </label>
+        <label>
+          <input type="radio" name="question10" value="0">
+          أبدا
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- Add the test button here or wherever you want it to be -->
+  <div class="d-flex justify-content-center">
+  <button class="btn btn-primary d-flex" >اختبار</button>
+  </div >
+
+</div>
+</div>
+<br> <br>

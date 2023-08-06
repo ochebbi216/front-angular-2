@@ -1,0 +1,103 @@
+// .neonText {
+//     color: #fff;
+//     text-shadow:
+//         0 0 7px #fff,
+//         0 0 10px #fff,
+//         0 0 21px #fff,
+//         0 0 42px #ff8077fa,
+//         0 0 82px #f93f3f,
+//         0 0 92px #ff3131,
+//         0 0 102px #ff1919,
+//         0 0 151px #ff0000;
+//   }
+  
+//   /* Additional styling */
+    
+//   body {
+//     font-size: 22px;
+//     font-family: "Vibur", sans-serif;
+//     background-color: #010a01;
+//   }  
+  
+//   h1, h2 {
+//     text-align: center;
+//     text-transform: uppercase;
+//     font-weight: 400;
+//   }
+    
+//   h1 {
+//       font-size: 5rem;
+//   }
+    
+//   h2 {
+//       font-size: 4rem;
+//   }
+  
+//   .container {
+//     margin-top: 20vh;
+//   }
+
+
+
+  .neonText {
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #ff8077fa,
+    0 0 82px #f93f3f,
+    0 0 92px #ff3131,
+    0 0 102px #ff1919,
+    0 0 151px #ff0000;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    animation: flicker 1.5s infinite alternate;     
+  }
+  
+  /* Flickering animation */
+  @keyframes flicker {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #ff8077fa,
+        0 0 82px #f93f3f,
+        0 0 92px #ff3131,
+        0 0 102px #ff1919,
+        0 0 151px #ff0000;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  
+  
+  /* Additional styling */
+    
+  h2 {
+   font-size: 4rem;
+   animation: flicker 2.5s infinite alternate;  
+  }
+  .container {
+    margin-top: 20vh;
+  }
+  
+  body {
+    font-size: 18px;
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: #010a01;
+  }  
+  
+  h1, h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+  }

@@ -1,0 +1,25 @@
+<table id="basic-datatable" class="table dt-responsive nowrap w-100 table-bordered">
+    <thead class="table-info">
+      <tr class="text-center">
+        <th>ParentId</th>
+        <th>ParentName</th>
+        <th>ParentMail</th>
+        <th>ParentPwd</th>
+        <th>ParentTel</th>
+        <th>ParentVille</th>
+        <th>ParentRegion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of parent" class="text-center">
+        <td>{{item.ParentId}}</td>
+        <td>{{item.ParentName}}</td>
+        <td>{{item.ParentMail}}</td>
+        <td>{{item.ParentPwd}}</td>
+        <td>{{item.ParentTel}}</td>
+        <td>{{item.ParentVille}}</td>
+        <td>{{item.ParentRegion}}</td>
+      </tr>
+    </tbody>
+  </table>
+  

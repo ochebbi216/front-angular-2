@@ -1,0 +1,64 @@
+<div class="container pd">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card ml-auto">
+          <div class="card-header bg-success text-white d-flex">إنشاء حساب لأولياء</div>
+          <div class="card-body white">
+            <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+              <div class="row align-items-stretch mb-5">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <!-- Name input -->
+                    <input class="form-control" formControlName="name" type="text" placeholder="Your Name *" required />
+                  </div>
+                  <div class="form-group">
+                    <!-- Email address input -->
+                    <input class="form-control" formControlName="email" type="email" placeholder="Your Email *" required />
+                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                  </div>
+                  <div class="form-group mb-md-0">
+                    <!-- Phone number input -->
+                    <input class="form-control" formControlName="phone" type="tel" placeholder="Your Phone *" required />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group form-group-textarea mb-md-0">
+                    <!-- Message input -->
+                    <textarea class="form-control" formControlName="message" placeholder="Your Message *" required></textarea>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Submit Button -->
+              <div class="text-center">
+                <button class="btn btn-primary btn-xl text-uppercase" type="submit" [disabled]="!contactForm.valid">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<script>
+    // Post form data to SheetDB on form submission
+    var form = document.getElementById('contactForm');
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+        })
+            .then(() => {
+                alert("Your message was sent successfully");
+                form.reset();
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred. Please try again later.");
+            });
+
+    });
+</script>

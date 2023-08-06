@@ -1,0 +1,32 @@
+<!-- <ngx-toastr></ngx-toastr> -->
+
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-center min-vh-100">
+    <div class="col-md-6 d-none d-md-block">
+      <img src="assets\img\3180764-removebg-preview.png" alt="Login Image" class="img-fluid" alt="Responsive image">
+    </div>
+    <div class="col-md-6">
+      <div class="login-form p-4" style="direction: rtl; text-align: right;">
+        <h2 class="text-center mb-4">تسجيل الدخول</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="email">عنوان البريد الإلكتروني:</label>
+            <input type="text" class="form-control" id="email" formControlName="email" placeholder="أدخل عنوان البريد الإلكتروني">
+          </div>
+          <div class="form-group">
+            <label for="password">كلمة المرور</label>
+            <div class="input-group input-group-merge">
+               <input matInput [type]="hide ? 'password' : 'text'" type="password" class="form-control" formControlName="password" placeholder="كلمة المرور" id="password" required  name="password" ><!-- [(ngModel)]="loginData.password"  #password="ngModel" -->
+             <div style= "padding: 2px 10px;" class="input-group-text" data-password="false">
+                 <span mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" ><mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon></span>
+             </div></div>          </div>
+          <button type="submit" class="btn btn-primary btn-block" [disabled]="loginForm.invalid" >تسجيل الدخول</button>
+        </form>
+        <div class="text-center mt-3">
+          <p><a routerLink="/create-account">إنشاء حساب</a></p>
+          <p><a routerLink="/forget-password">هل نسيت كلمة المرور؟</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

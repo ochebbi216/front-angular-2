@@ -1,0 +1,93 @@
+
+/* styles.css */
+
+.header-container {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  height: 100vh; /* Set the height to 100vh to make the container full-screen */
+  background-image: url('/assets/img/rm222batch5-kul-06.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  flex-wrap: wrap;
+}
+
+.titre {
+  text-align: center; /* Center the text inside the div */
+  max-width: 600px; /* Set a maximum width for the content */
+  margin: 20px;
+}
+
+h1 {
+  /* Add styles for the heading if needed */
+  color: black; /* Set heading color to red (example) */
+  /* ... add more styles ... */
+}
+h1 {
+  flex: 1; /* The h1 will take the available width in the container */
+  /* Add any other styles specific to the h1 element */
+
+}
+
+
+/* Bliniking text styles */
+.blinking-text {
+  animation: blink 0.5s infinite; /* Blinking animation */
+}
+
+/* Define the blinking animation */
+@keyframes blink {
+  0%, 100% {
+    color: rgb(255, 0, 0); /* Red color */
+  }
+  50% {
+    color: rgb(0, 255, 0); /* Green color */
+  }
+
+}
+@media (max-width: 768px) {
+  .titre {
+    max-width: 90%;
+    font-size: 16px;
+  }
+}
+
+.txt {
+  direction: rtl; /* Set the text direction to right-to-left */
+  font-size: 35pt;
+  color: #9ACD32;
+  width: 21ch;
+  margin: 0.5em 0.25em;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:  typing-arabic 2s steps(21, end), blink-caret .5s  step-end infinite alternate;
+}
+
+@keyframes typing-arabic {
+  from {
+    width: 0;
+    
+  }
+}
+
+@-webkit-keyframes typing-arabic {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
