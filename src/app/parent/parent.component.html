@@ -6,8 +6,8 @@
           <div class="card-body">
             <!-- <div class="text-center">لم تتم إضافة أطفال حتى الآن</div> -->
             <a class="btn btn-primary" routerLink="/Child">إضافة طفل</a>
-            
-              <div *ngFor="let item of child" class="child card  d-flex flex-row my-3 p-2 ">
+            <div *ngFor="let item of child">
+              <div  *ngIf="item.EnfantParentId==idParent" class="child card  d-flex flex-row my-3 p-2 ">
                 <div class="col-3 d-flex flex-column">
                   <p class="text-center">name </p>
                   <p class="text-center"> {{item.EnfantName}}</p>
@@ -27,7 +27,7 @@
                   <i class="fa fa-user" aria-hidden="true"></i>
                 </div>
               </div>
-
+            </div>
             </div>
           </div>
         </div>

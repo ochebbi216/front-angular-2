@@ -19,11 +19,11 @@ export class ParentService {
   
     return this.http.get (this.endpoint.url + 'parent/' + id);
    }
-  //  getall ( ){
+   getall ( ){
  
-  //   return this.http.get(this.endpoint.url + 'parent');
-  //  }
-   getall(): Observable<Parent[]> {
+    return this.http.get(this.endpoint.url + 'parent');
+   }
+   getall2(): Observable<Parent[]> {
     return this.http.get<Parent[]>(this.endpoint.url + 'parent');
   }
   }

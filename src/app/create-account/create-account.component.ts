@@ -1189,7 +1189,7 @@ export class CreateAccountComponent implements OnInit {
       return;
     }
     
-    this.apiService.getall().subscribe(
+    this.apiService.getall2().subscribe(
       (data: Parent[]) => {
         console.log('API Response:', data); // Check the API response in the browser console
 

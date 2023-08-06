@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Child } from '../childMoldel.interface';
 import { EndpointService } from './endpoint.service';
 @Injectable({
   providedIn: 'root'
@@ -16,7 +18,9 @@ export class ChildService {
  
    return this.http.get(this.endpoint.url + 'enfant');
   }
- 
+  getall2(): Observable<Child[]> {
+    return this.http.get<Child[]>(this.endpoint.url + 'parent');
+  }
   getByParentId ( id: any ){
  
    return this.http.get (this.endpoint.url + 'enfants/' + id);
@@ -31,4 +35,5 @@ export class ChildService {
   update ( id: any , child:any){
  
    return this.http.put (this.endpoint.url + 'child/update/' +id, child);
-  }}
+  }
+}

@@ -33,7 +33,7 @@ onSubmit() {
     const email = this.loginForm.value.email;
     const password = this.loginForm.value.password;
 
-    this.parentService.getall().subscribe(
+    this.parentService.getall2().subscribe(
       (data: Parent[]) => {
         console.log('API Response:', data); // Check the API response in the browser console
 

@@ -10,7 +10,7 @@ export class TestService {
   constructor(private http: HttpClient , private endpoint : EndpointService) { }
   create (test: any ){
  
-   return this.http.post (this.endpoint.url + 'test',test );
+   return this.http.post (this.endpoint.url + 'test/',test );
   }
  
   getall ( ){
@@ -20,6 +20,15 @@ export class TestService {
  
   getbyid ( id: any ){
  
-   return this.http.get (this.endpoint.url + 'test/getbyid/' + id);
+   return this.http.get (this.endpoint.url + 'test/' + id);
   }
+  delete ( id: any ){
+ 
+    return this.http.delete (this.endpoint.url + 'test/' + id);
+   }
+  
+  update ( id: any , child:any){
+  
+    return this.http.put (this.endpoint.url + 'test/' +id, child);
+   }
 }
