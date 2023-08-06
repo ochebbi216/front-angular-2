@@ -41,6 +41,7 @@ export class ChildComponent {
                 console.log(response);
                 console.log("Data to be created:", this.formGroup.value)
                 this.msjService.successMessage("your child was added successfully, test started ");
+                this.router.navigate(['/Questionnaire']);
 
               },
               (error) => {
@@ -50,16 +51,15 @@ export class ChildComponent {
             );
 
             const name = this.formGroup.value.EnfantName;
-            const idParent =this.parentService.getParentId() ;
+            const idParent =this.formGroup.value.EnfantParentId ;
         
             this.apiService.getall2().subscribe(
               (data: Child[]) => {
-                console.log('API Response:', data); // Check the API response in the browser console
+                console.log('API Response:', data); 
         
                 const matchedChild = data.find((Child) => Child.EnfantName === name && Child.EnfantParentId === idParent);
         
                 if (matchedChild) {
-                  //add child.id of matchedChild to next page
                    const id=matchedChild.EnfantId;
                    localStorage.setItem('idChild', JSON.stringify({ id }));
                    this.router.navigate(['/Questionnaire']);

@@ -19,7 +19,7 @@ export class ChildService {
    return this.http.get(this.endpoint.url + 'enfant');
   }
   getall2(): Observable<Child[]> {
-    return this.http.get<Child[]>(this.endpoint.url + 'parent');
+    return this.http.get<Child[]>(this.endpoint.url + 'enfant');
   }
   getByParentId ( id: any ){
  
